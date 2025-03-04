@@ -1,0 +1,15 @@
+function fetchDogBreed() {
+            //Create a variable to store the breed of the dog. You have to select the HTML element that you will use. Remember get the value and toLowerCase() at the end of the line.
+            let url = `https://dog.ceo/api/breed/${breed}/images/random`;
+            
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === "success") {
+                        //Get the element from HTML to display the picture. Get the src and store here the data.message.
+                    } else {
+                        alert("Breed not found. Try another!");
+                    }
+                })
+                .catch(error => console.error('Error fetching data:', error));
+}
